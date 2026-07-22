@@ -3,7 +3,7 @@ library(VIM)   # KNN imputation
 
 # ---- 1. Read raw all-sites file ----
 raw <- readr::read_csv(
-  "KAT_AKI_full_allsites_4.26.26.csv",
+  "REDACTED",
   show_col_types = FALSE)
 
 # ---- 2. Build table 1: extract + map to final_dat's 26-column schema ----
@@ -63,5 +63,5 @@ cat("\nRemaining NAs after imputation:", sum(is.na(tab1_imp)), "\n")
 
 # ---- 5. Save to Desktop/Redo ----
 dir.create("Desktop", showWarnings = FALSE)
-readr::write_csv(tab1_imp, "Desktop/table1_imputed.csv")
-cat("\nSaved to Desktop/table1_imputed.csv\n")
+readr::write_csv(tab1_imp, "REDACTED")
+cat("REDACTED")
