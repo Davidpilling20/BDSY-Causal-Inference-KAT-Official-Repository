@@ -1,7 +1,7 @@
 library(tidyverse)
 library(zoo)
 
-final <- readr::read_csv("/Users/zjx/Desktop/REDO/table3_labeled.csv", show_col_types = FALSE)
+final <- readr::read_csv("Desktop/table3_labeled.csv", show_col_types = FALSE)
 
 df <- final %>%
   transmute(idx = row_number(), hosp = hospital,
@@ -50,6 +50,6 @@ p1 <- ggplot(sm, aes(idx, p, fill = stratum)) +
 
 p1
 
-dir.create("/Users/zjx/Desktop/REDO/poster plots", showWarnings = FALSE)
-ggsave("/Users/zjx/Desktop/REDO/poster plots/stratum_composition.png",
+dir.create("Desktop", showWarnings = FALSE)
+ggsave("Desktop/stratum_composition.png",
        p1, width = 10, height = 6, dpi = 500)
