@@ -1,8 +1,8 @@
 library(rpart)
 
 # ---- Read table 3 and posterior draws ----
-df   <- read.csv("Desktop/table3_labeled.csv", stringsAsFactors = FALSE)
-post <- readRDS("Desktop/posterior_draws.rds")
+df   <- read.csv("REDACTED", stringsAsFactors = FALSE)
+post <- readRDS("REDACTED")
 itty_draws <- post$itty_draws
 ittw_draws <- post$ittw_draws
 df$row_id <- seq_len(nrow(df))
