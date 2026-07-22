@@ -2,7 +2,7 @@ library(BART)
 set.seed(2026)
 
 # ---- 1. Read table 1 ----
-df <- read.csv("/Users/zjx/Desktop/Redo/table1_imputed.csv", stringsAsFactors = FALSE)
+df <- read.csv("Desktop/table1_imputed.csv", stringsAsFactors = FALSE)
 
 # ---- 2. Pull columns BY NAME (never by position) ----
 Y <- df$Y
@@ -78,8 +78,8 @@ ittw_ci <- t(apply(ittw_draws, 2, quantile, probs = c(0.025, 0.975)))
 cat("Defiers (ITTw upper < 0):", sum(ittw_ci[,2] < 0), "\n")
 
 # ---- 11. Save table 2 (+ keep posterior draws for credible intervals in script 4) ----
-write.csv(df, "/Users/zjx/Desktop/Redo/table2_scored.csv", row.names = FALSE)
+write.csv(df, "Desktop/table2_scored.csv", row.names = FALSE)
 saveRDS(list(itty_draws = itty_draws, ittw_draws = ittw_draws,
              adjusted_ittw = adjusted_ittw),
-        "/Users/zjx/Desktop/Redo/posterior_draws.rds")
-cat("\nSaved table2_scored.csv and posterior_draws.rds to Desktop/Redo\n")
+        "Desktop/posterior_draws.rds")
+cat("\nSaved table2_scored.csv and posterior_draws.rds to Desktop\n")
