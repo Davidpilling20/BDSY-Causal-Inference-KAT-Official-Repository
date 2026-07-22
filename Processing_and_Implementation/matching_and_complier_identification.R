@@ -1,5 +1,5 @@
 # ---- 1. Read table 2 ----
-dat <- read.csv("Desktop/table2_scored.csv", stringsAsFactors = FALSE)
+dat <- read.csv("REDACTED", stringsAsFactors = FALSE)
 
 # ---- 2. Define the four sets by (Z, W) under monotonicity ----
 # M0 = {Z=0, W=0}: never-taker + complier (mixed)
