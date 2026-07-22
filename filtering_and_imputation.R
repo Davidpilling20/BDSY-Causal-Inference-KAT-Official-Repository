@@ -3,7 +3,7 @@ library(VIM)   # KNN imputation
 
 # ---- 1. Read raw all-sites file ----
 raw <- readr::read_csv(
-  "/Users/zjx/Desktop/Yale Causal inference 2026/data/Real Data/KAT AKI/KAT_AKI_full_allsites_4.26.26.csv",
+  "KAT_AKI_full_allsites_4.26.26.csv",
   show_col_types = FALSE)
 
 # ---- 2. Build table 1: extract + map to final_dat's 26-column schema ----
@@ -62,6 +62,6 @@ tab1_imp <- VIM::kNN(tab1, k = 5, imp_var = FALSE)
 cat("\nRemaining NAs after imputation:", sum(is.na(tab1_imp)), "\n")
 
 # ---- 5. Save to Desktop/Redo ----
-dir.create("/Users/zjx/Desktop/Redo", showWarnings = FALSE)
-readr::write_csv(tab1_imp, "/Users/zjx/Desktop/Redo/table1_imputed.csv")
-cat("\nSaved to /Users/zjx/Desktop/Redo/table1_imputed.csv\n")
+dir.create("Desktop", showWarnings = FALSE)
+readr::write_csv(tab1_imp, "Desktop/table1_imputed.csv")
+cat("\nSaved to Desktop/table1_imputed.csv\n")
