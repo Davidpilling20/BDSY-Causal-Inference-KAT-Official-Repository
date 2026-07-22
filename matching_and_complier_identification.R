@@ -1,5 +1,5 @@
 # ---- 1. Read table 2 ----
-dat <- read.csv("/Users/zjx/Desktop/Redo/table2_scored.csv", stringsAsFactors = FALSE)
+dat <- read.csv("Desktop/table2_scored.csv", stringsAsFactors = FALSE)
 
 # ---- 2. Define the four sets by (Z, W) under monotonicity ----
 # M0 = {Z=0, W=0}: never-taker + complier (mixed)
@@ -58,5 +58,5 @@ print(table(dat$stratum, useNA = "ifany"))
 cat("\ncomplier_source:\n"); print(table(dat$complier_source, useNA = "ifany"))
 
 # ---- 8. Save table 3 ----
-write.csv(dat, "/Users/zjx/Desktop/Redo/table3_labeled.csv", row.names = FALSE)
-cat("\nSaved table3_labeled.csv to Desktop/Redo\n")
+write.csv(dat, "Desktop/table3_labeled.csv", row.names = FALSE)
+cat("\nSaved table3_labeled.csv to Desktop\n")
