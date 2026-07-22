@@ -1,6 +1,6 @@
 library(tidyverse)
 
-df <- read.csv("/Users/zjx/Desktop/Redo/table3_labeled.csv", stringsAsFactors = FALSE)
+df <- read.csv("Desktop/table3_labeled.csv", stringsAsFactors = FALSE)
 d <- df %>% mutate(System = ifelse(hospital == 1, "Hopkins", "Yale"))
 
 lab_map <- c(
@@ -38,4 +38,4 @@ p <- ggplot(smd, aes(x = smd, y = reorder(label, abssmd))) +
   )
 
 print(p)
-ggsave("/Users/zjx/Desktop/Redo/poster plots/smd_baseline_by_system.png", p, width = 10, height = 4, dpi = 500)
+ggsave("Desktop/smd_baseline_by_system.png", p, width = 10, height = 4, dpi = 500)
