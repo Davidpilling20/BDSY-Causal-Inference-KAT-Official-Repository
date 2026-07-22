@@ -2,7 +2,7 @@ library(BART)
 set.seed(2026)
 
 # ---- 1. Read table 1 ----
-df <- read.csv("Desktop/table1_imputed.csv", stringsAsFactors = FALSE)
+df <- read.csv("REDACTED", stringsAsFactors = FALSE)
 
 # ---- 2. Pull columns BY NAME (never by position) ----
 Y <- df$Y
