@@ -179,8 +179,8 @@ draw_all <- function() {
 }
 
 ## high-resolution PNG (crisp raster; cairo for correct Unicode glyphs)
-png("cart_compliers_hcace_right.png", width = 3800, height = 2300, res = 300,
+png("cart_compliers_hcace.png", width = 3800, height = 2300, res = 300,
     type = "cairo")
 draw_all(); dev.off()
 
-cat("Saved:", normalizePath("cart_compliers_hcace_right.png"), "\n")
+cat("Saved:", normalizePath("cart_compliers_hcace.png"), "\n")
